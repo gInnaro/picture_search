@@ -1,0 +1,4 @@
+pixellib==0.7.1
+pycocotools==2.0.6
+torch==2.0.1
+torchvision==0.15.2

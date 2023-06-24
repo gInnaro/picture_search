@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block left %}
+   <p>Результат</p>
+   <p>Ширина: {{width}}</p>
+   <p>Высота: {{height}}</p>
+   <div>Найдено: </div>
+   <div class="left_text">
+   {% for key, value in dicts.items(): %}
+      <p>{{key }} штук: {{ value}}<br></p>
+   {% endfor %}</div>
+{% endblock %}
+{% block right %}
+   <img src="{{ url_for('static', filename='image.jpg') }}" width="600"/>
+{% endblock %}

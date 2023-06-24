@@ -1,0 +1,22 @@
+<html>
+   <head>
+      <title>success</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+   </head>
+   <body>
+     <form action = "" method = "post" enctype="multipart/form-data">
+          <input type="file" name="file" />
+          <input type = "submit" value="Загрузить">
+        </form>
+     <div class="main">
+       <div class="left_main">
+         {% block left %}
+         {% endblock %}
+       </div>
+       <div class="right_main">
+         {% block right %}
+         {% endblock %}
+       </div>
+     </div>
+   </body>
+</html>

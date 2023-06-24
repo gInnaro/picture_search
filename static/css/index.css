@@ -1,0 +1,22 @@
+
+.main div{
+    display:inline-block;
+    vertical-align: top;
+}
+
+div.left_main {
+    line-height: 1.5;
+    width: 300px;
+}
+p {
+    margin: 0px;
+}
+
+div.left_text {
+    line-height: 1.5;
+}
+
+div.right_main {
+    width: 400px;
+}
+
