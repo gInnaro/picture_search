@@ -13,14 +13,13 @@ def main():
         dist = 'static/image.jpg'
         answer = []
         answer_dict = {}
-        f = request.files['file']
-        file = f.filename
-        shutil.copy2(file, dist)
-        im = Image.open(file)
+        f = request.files['files']
+        f.save(dist)
+        im = Image.open(dist)
         w, h = im.size
         ins = instanceSegmentation()
         ins.load_model("pointrend_resnet50.pkl")
-        text = ins.segmentImage(file)
+        text = ins.segmentImage('static/image.jpg')
         for txt in text[0]['class_names']:
             answer.append(dictationary[txt])
         for i in range(len(answer)):
